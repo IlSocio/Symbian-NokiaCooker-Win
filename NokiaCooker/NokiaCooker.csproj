@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{834B144B-3E88-4854-9C9D-88858D7EDB43}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FuzzyByte.NokiaCooker</RootNamespace>
+    <AssemblyName>NokiaCooker</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Resources\Main.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <StartupObject>FuzzyByte.NokiaCooker.Program</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NAppUpdate.Framework, Version=0.1.0.0, Culture=neutral, PublicKeyToken=d1f1d1f19f9e5a56, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NAppUpdate-master\src\NAppUpdate.Framework\bin\Release\NAppUpdate.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyData.cs" />
+    <Compile Include="FileOperation.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepartitionDialog.resx">
+      <DependentUpon>RepartitionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnlockRofsDialog.resx">
+      <DependentUpon>UnlockRofsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RepartitionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepartitionDialog.Designer.cs">
+      <DependentUpon>RepartitionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnlockRofsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnlockRofsDialog.Designer.cs">
+      <DependentUpon>UnlockRofsDialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FuzzyByte\FuzzyByte.Forms\FuzzyByte.Forms.csproj">
+      <Project>{B46CC932-3654-4604-9A9C-D5D75A466ACD}</Project>
+      <Name>FuzzyByte.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FuzzyByte\FuzzyByte.IO\FuzzyByte.IO.csproj">
+      <Project>{5FDA3655-0BDB-4A1D-95DC-9510529E3CD6}</Project>
+      <Name>FuzzyByte.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FuzzyByte\FuzzyByte.OS\FuzzyByte.OS.csproj">
+      <Project>{7EC509CF-1CFE-40D3-8C77-C4066C3A952A}</Project>
+      <Name>FuzzyByte.OS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FuzzyByte\FuzzyByte.Utils\FuzzyByte.Utils.csproj">
+      <Project>{BBCA8CA4-7591-4854-A7D2-0E1937FC365C}</Project>
+      <Name>FuzzyByte.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Firmware\Firmware.csproj">
+      <Project>{6B37EF86-F2B2-4A76-80FA-2B6DE5B30C20}</Project>
+      <Name>Firmware</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\app.manifest" />
+    <None Include="Resources\add-remove2.gif" />
+    <Content Include="INFO.txt" />
+    <Content Include="Log1.txt" />
+    <Content Include="Log2.txt" />
+    <Content Include="Log3.txt" />
+    <Content Include="Log4.txt" />
+    <None Include="Resources\Unlock.png" />
+    <Content Include="Updates\NokiaCooker_feed_update.xml" />
+    <Content Include="Resources\add.gif" />
+    <None Include="Resources\Donate32.png" />
+    <None Include="Resources\Donate16.png" />
+    <Content Include="Resources\Folder open.png" />
+    <Content Include="Resources\leftright.png" />
+    <Content Include="Resources\LR.png" />
+    <Content Include="Resources\minus.gif" />
+    <None Include="Resources\resizeRofs.png" />
+    <Content Include="Resources\partitions.png" />
+    <None Include="Resources\partitions1.png" />
+    <Content Include="Resources\Save File.png" />
+    <Content Include="Resources\Symbol-Add.png" />
+    <Content Include="Resources\Cancel24.png" />
+    <Content Include="Resources\cellphone.png" />
+    <Content Include="Resources\chk_off.png" />
+    <Content Include="Resources\chk_on.png" />
+    <Content Include="Resources\Main.ico" />
+    <Content Include="Resources\SaveHH.bmp" />
+    <Content Include="Resources\Symbol-Delete.png" />
+    <None Include="Resources\treeview_Expand.png" />
+    <Content Include="Resources\Windows Explorer.png" />
+    <Content Include="Tmp.txt" />
+    <Content Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

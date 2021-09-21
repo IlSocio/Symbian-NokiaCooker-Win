@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feed>
+  <Tasks>
+    <FileUpdateTask hotswap="false" updateTo="http://www.symbian-toys.com/updates/NokiaCooker.exe" localPath="NokiaCooker.exe">
+      <Conditions>
+        <FileChecksumCondition checksumType="sha256" type="not" checksum="25EB18E8F453BF9A7D56E7DCB9E297445CD309B090AFBFC3ABC87D21DD6D1057" />
+      </Conditions>
+    </FileUpdateTask>
+  </Tasks>
+</Feed>
